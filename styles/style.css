@@ -12,34 +12,40 @@ p {
 }
 
 /* header styles  */
+
 .flexible-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    overflow: hidden;
     background-color: rgba(0, 0, 216, 0.863);
 
 }
 
-.heading {
-    padding: 121px 102px 240px 156px;
+.title-text {
+    color: white;
+    margin-left: 10px;
 }
 
-.heading-text {
-    font-size: 64px;
-    color: #FFFFFF;
-
+.title-text h1 {
+    margin: 0;
+    font-size: 3rem;
 }
+
 
 .button-link {
+    margin-top: 38px;
+}
+
+.button-link a {
     text-decoration: none;
+    padding: 5px 15px;
     color: #FFFFFF;
     background-color: #E02C6D;
-    width: 168px;
-    height: 44px;
-    padding: 10px 24px;
+    border-radius: 10px;
 }
 
 .button-link:hover {
-    background-color: green;
-    color: white;
     cursor: pointer;
 }
 
@@ -53,55 +59,62 @@ p {
 .head-img {
     width: 556.01px;
     height: 438px;
-    padding: 67px 141px 86px 102px;
+    margin-top: 67px;
 }
+
+.head-img img {
+    height: 338px;
+    width: 400px;
+    transition: transform 2s ease-in-out;
+}
+
+.head-img:hover img {
+    transform: rotate(30deg);
+}
+
 
 /* player intro blogs  */
 
 .container {
-    padding: 70px 210px 165px 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .players {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
-
+    grid-column-gap: 27px 30px;
+    margin: 70px 0 20px 0;
 
 }
 
 .player {
-
-
-    box-shadow: 15px 15px 50px gray;
+    width: 330px;
+    height: 474px;
+    box-shadow: 3px 3px 8px gray;
+    border-radius: 10px;
+    margin: 15px;
 
 }
 
-img {
-    align-items: center;
-    justify-content: center;
-    width: 88%;
-    padding: 20px;
-}
-
-.img-width {
-    width: 300px;
+.player-img img {
     height: 256px;
+    width: 300px;
+    padding: 15px;
 }
 
 .name-text {
-    padding-left: 15px;
-    font-size: 28px;
-    margin-top: 16px;
-    margin-bottom: 10px;
+    margin: 0;
 }
 
 .intro-text {
-    padding: 15px;
-    width: 80%;
-    font-size: 16px;
-    margin-top: 10px;
+    margin: 5px;
+}
+
+.player-details {
+    padding-left: 15px;
 }
 
 /* Contact Section */
@@ -162,6 +175,11 @@ img {
 
 /* Tour blogs section  */
 
+.container-2 {
+    justify-content: center;
+    align-items: center;
+}
+
 .grid {
     margin: 80px;
     display: grid;
@@ -201,7 +219,8 @@ img {
     text-transform: uppercase;
 }
 
-.text button {
+.text a {
+    text-decoration: none;
     background: #ef6f6c;
     border-radius: 20px;
     border: none;
@@ -264,5 +283,19 @@ img {
     .logo {}
 
 
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
+
+}
+
+@media only screen and(max-width: 500px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid>article {
+        text-align: center;
+    }
 }

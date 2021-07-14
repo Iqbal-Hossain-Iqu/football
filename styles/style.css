@@ -13,7 +13,7 @@ p {
 
 /* header styles  */
 
-.flexible-container {
+.grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
@@ -304,39 +304,20 @@ footer {
         overflow-x: hidden;
     }
 
-
-
-
-    .flexible-container {
-        width: 100%;
+    .title-text h1 {
+        font-size: 2rem;
+        padding: 10px 250px 0 0;
     }
 
-    .heading {
-        grid-template-columns: repeat(1, 1fr);
-
+    .match-img {
+        margin-bottom: 30px;
     }
 
-    .heading-text {
-        font-size: 23px;
+    .match-img img {
+        width: 330px;
+        height: 274px;
     }
 
-    .head-img {
-        width: 50%;
-    }
-
-    .courses,
-    .heading,
-    .logo {}
-
-
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-
-}
-
-@media only screen and(max-width: 500px) {
     .grid {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -344,4 +325,77 @@ footer {
     .grid>article {
         text-align: center;
     }
+
+    .logo img {
+        width: 300px;
+    }
+
+    .container,
+    .grid-container {
+        width: 100%;
+    }
+
+    .grid-container,
+    .players,
+    .highlights {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+/* tab  */
+
+
+
+@media only screen and (min-width:689px) and (max-width:991px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .title-text {
+        padding-left: 20px;
+    }
+
+    .title-text h1 {
+        font-size: 1.7rem;
+    }
+
+    .head-img img {
+        margin-left: 120px;
+    }
+
+    .container,
+    .grid-container {
+        width: 100%;
+    }
+
+    .highlights {
+        margin: 60px 20px;
+    }
+
+    .match-img img {
+        width: 330px;
+        height: 274px;
+    }
+
+    .grid-container,
+    .players,
+    .highlights {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .title-text {
+        font-size: 1rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+
+
+
+
 }
